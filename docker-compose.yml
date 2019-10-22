@@ -1,7 +1,12 @@
-web:
-  image: nginx:latest
-  volumes:
-    - ./nginx.conf:/etc/nginx/nginx.conf
-    - ./www:/var/www/data
-  ports:
-   - "80:80"
+version: "2"
+
+services:
+  web:
+    image: nginx:latest
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./www:/var/www/data
+    ports:
+    - "80:80"
+
+
